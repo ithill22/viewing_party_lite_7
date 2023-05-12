@@ -1,0 +1,18 @@
+<h3>
+  <% if params[:query].present? %>
+    Movie Results for <%= params[:query] %>
+  <% else %>
+    Top Rated Movies
+  <% end %>
+</h3>
+<br>
+<%= button_to "Discover Page", user_discover_index_path(@user), method: :get %>
+<br>
+<ul id="movie-list">
+  <% @movies.each do |movie| %>
+    <li id="movie-<%=movie.id%>">
+      <p><b><%= link_to movie.title, user_movie_path(@user, movie.id) %></b></p>
+      <p>Vote Average: <%= movie.vote_average %></p>
+    </li>
+  <% end %>
+</ul>

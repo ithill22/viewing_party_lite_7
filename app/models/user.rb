@@ -5,4 +5,8 @@ class User < ApplicationRecord
 
   has_many :party_users
   has_many :parties, through: :party_users
+
+  def name_and_email
+    "#{name} (#{email})"
+  end
 end

@@ -1,0 +1,395 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/550?api_key=27497a269af52c0049ba8bfe885390eb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 12 May 2023 16:05:53 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=23922
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 86a19bcac53cd02291bef63cf5445bc3
+      X-Memc-Age:
+      - '13275'
+      X-Memc-Expires:
+      - '13372'
+      Etag:
+      - W/"b82db4be25cf217989b65eadd27fb2b3"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 dbb24f3b9579454525416ef48c0f512c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P3
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - JRa3XzMJ8A52ch4vyyU8GqmnuC_fTfqz9DOar5TNzCNFk3lowRWuUQ==
+      Age:
+      - '20913'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/hZkgoQYus5vegHoetLkCJzb17zJ.jpg","belongs_to_collection":null,"budget":63000000,"genres":[{"id":18,"name":"Drama"},{"id":53,"name":"Thriller"},{"id":35,"name":"Comedy"}],"homepage":"http://www.foxmovies.com/movies/fight-club","id":550,"imdb_id":"tt0137523","original_language":"en","original_title":"Fight
+        Club","overview":"A ticking-time-bomb insomniac and a slippery soap salesman
+        channel primal male aggression into a shocking new form of therapy. Their
+        concept catches on, with underground \"fight clubs\" forming in every town,
+        until an eccentric gets in the way and ignites an out-of-control spiral toward
+        oblivion.","popularity":78.805,"poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg","production_companies":[{"id":508,"logo_path":"/7cxRWzi4LsVm4Utfpr1hfARNurT.png","name":"Regency
+        Enterprises","origin_country":"US"},{"id":711,"logo_path":"/tEiIH5QesdheJmDAqQwvtN60727.png","name":"Fox
+        2000 Pictures","origin_country":"US"},{"id":20555,"logo_path":"/hD8yEGUBlHOcfHYbujp71vD8gZp.png","name":"Taurus
+        Film","origin_country":"DE"},{"id":54051,"logo_path":null,"name":"Atman Entertainment","origin_country":""},{"id":54052,"logo_path":null,"name":"Knickerbocker
+        Films","origin_country":"US"},{"id":4700,"logo_path":"/A32wmjrs9Psf4zw0uaixF0GXfxq.png","name":"The
+        Linson Company","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
+        Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1999-10-15","revenue":100853753,"runtime":139,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Mischief.
+        Mayhem. Soap.","title":"Fight Club","video":false,"vote_average":8.4,"vote_count":26374}'
+  recorded_at: Fri, 12 May 2023 21:54:26 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/550?api_key=27497a269af52c0049ba8bfe885390eb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 12 May 2023 16:05:53 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=23922
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 86a19bcac53cd02291bef63cf5445bc3
+      X-Memc-Age:
+      - '13275'
+      X-Memc-Expires:
+      - '13372'
+      Etag:
+      - W/"b82db4be25cf217989b65eadd27fb2b3"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 e5778a61da2e928608d7fdc9242d1f8e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P3
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - qPEMpBlOauIUTj2zvX0jqxtyrAMpi4cPPcY-yutjPaSS3fyp_xBiCg==
+      Age:
+      - '20913'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/hZkgoQYus5vegHoetLkCJzb17zJ.jpg","belongs_to_collection":null,"budget":63000000,"genres":[{"id":18,"name":"Drama"},{"id":53,"name":"Thriller"},{"id":35,"name":"Comedy"}],"homepage":"http://www.foxmovies.com/movies/fight-club","id":550,"imdb_id":"tt0137523","original_language":"en","original_title":"Fight
+        Club","overview":"A ticking-time-bomb insomniac and a slippery soap salesman
+        channel primal male aggression into a shocking new form of therapy. Their
+        concept catches on, with underground \"fight clubs\" forming in every town,
+        until an eccentric gets in the way and ignites an out-of-control spiral toward
+        oblivion.","popularity":78.805,"poster_path":"/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg","production_companies":[{"id":508,"logo_path":"/7cxRWzi4LsVm4Utfpr1hfARNurT.png","name":"Regency
+        Enterprises","origin_country":"US"},{"id":711,"logo_path":"/tEiIH5QesdheJmDAqQwvtN60727.png","name":"Fox
+        2000 Pictures","origin_country":"US"},{"id":20555,"logo_path":"/hD8yEGUBlHOcfHYbujp71vD8gZp.png","name":"Taurus
+        Film","origin_country":"DE"},{"id":54051,"logo_path":null,"name":"Atman Entertainment","origin_country":""},{"id":54052,"logo_path":null,"name":"Knickerbocker
+        Films","origin_country":"US"},{"id":4700,"logo_path":"/A32wmjrs9Psf4zw0uaixF0GXfxq.png","name":"The
+        Linson Company","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
+        Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1999-10-15","revenue":100853753,"runtime":139,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Mischief.
+        Mayhem. Soap.","title":"Fight Club","video":false,"vote_average":8.4,"vote_count":26374}'
+  recorded_at: Fri, 12 May 2023 21:54:26 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/378?api_key=27497a269af52c0049ba8bfe885390eb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 12 May 2023 21:54:26 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=26203
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - f6fcde49f3061aaf293be27a7ea0c064
+      X-Memc-Age:
+      - '17050'
+      X-Memc-Expires:
+      - '5578'
+      Etag:
+      - W/"ebb662fcb04862a79a8941ddc9e83e9d"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 acb55e8d2b8ad7df45561a8bccaaa688.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P3
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - Fd4Xr1XBgMeTrTAW2Di_Ds9OlZmTcjG0bYu0S0_nKo3Ahweh96eegw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/kYB4Le7xjOckmiMGgroElQTZiwY.jpg","belongs_to_collection":null,"budget":6000000,"genres":[{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"}],"homepage":"","id":378,"imdb_id":"tt0093822","original_language":"en","original_title":"Raising
+        Arizona","overview":"When a childless couple of an ex-con and an ex-cop decide
+        to help themselves to one of another family''s quintuplets, their lives become
+        more complicated than they anticipated.","popularity":12.945,"poster_path":"/m5Zp4K4hKdPhsBl3E0p8I7QomlT.jpg","production_companies":[{"id":11273,"logo_path":null,"name":"Circle
+        Films","origin_country":""},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
+        Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1987-03-01","revenue":29180280,"runtime":94,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Their
+        lawless years are behind them. Their child-rearing years lay ahead...","title":"Raising
+        Arizona","video":false,"vote_average":7.029,"vote_count":1782}'
+  recorded_at: Fri, 12 May 2023 21:54:26 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/378?api_key=27497a269af52c0049ba8bfe885390eb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 12 May 2023 21:54:26 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=26203
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - f6fcde49f3061aaf293be27a7ea0c064
+      X-Memc-Age:
+      - '17050'
+      X-Memc-Expires:
+      - '5578'
+      Etag:
+      - W/"ebb662fcb04862a79a8941ddc9e83e9d"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 949f831c3bb70b840d7eecaeb220bbfa.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P3
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - SigJpVwos0z_d-2O4ZAjEiTH_zm1PqPD9JgjI33vl5gawqPJ06WJ7A==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/kYB4Le7xjOckmiMGgroElQTZiwY.jpg","belongs_to_collection":null,"budget":6000000,"genres":[{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"}],"homepage":"","id":378,"imdb_id":"tt0093822","original_language":"en","original_title":"Raising
+        Arizona","overview":"When a childless couple of an ex-con and an ex-cop decide
+        to help themselves to one of another family''s quintuplets, their lives become
+        more complicated than they anticipated.","popularity":12.945,"poster_path":"/m5Zp4K4hKdPhsBl3E0p8I7QomlT.jpg","production_companies":[{"id":11273,"logo_path":null,"name":"Circle
+        Films","origin_country":""},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
+        Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1987-03-01","revenue":29180280,"runtime":94,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Their
+        lawless years are behind them. Their child-rearing years lay ahead...","title":"Raising
+        Arizona","video":false,"vote_average":7.029,"vote_count":1782}'
+  recorded_at: Fri, 12 May 2023 21:54:26 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/421?api_key=27497a269af52c0049ba8bfe885390eb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 0c3d82219b13a685c0bf3533df9acb52
+      X-Memc-Age:
+      - '624'
+      X-Memc-Expires:
+      - '25811'
+      Date:
+      - Fri, 12 May 2023 21:54:26 GMT
+      Cache-Control:
+      - public, max-age=27298
+      Etag:
+      - W/"2fd05a33fb41b16457541bbcc0e55b4e"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - RefreshHit from cloudfront
+      Via:
+      - 1.1 917f52e466585bc699c3b9819efba43a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P3
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - XYiHnQnm3MKSBJbX34uME1a0avkTj-ioQDGchCs1ut-kag0hie6F8w==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvN3RXa3RuTFE4MUc4cEhVa2h1VGViY1RrY0IzLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MDAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6MTIsIm5hbWUiOiJBZHZlbnR1cmUifSx7ImlkIjozNSwibmFtZSI6IkNvbWVkeSJ9LHsiaWQiOjE4LCJuYW1lIjoiRHJhbWEifV0sImhvbWVwYWdlIjoiIiwiaWQiOjQyMSwiaW1kYl9pZCI6InR0MDM2MjI3MCIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IlRoZSBMaWZlIEFxdWF0aWMgd2l0aCBTdGV2ZSBaaXNzb3UiLCJvdmVydmlldyI6IlJlbm93bmVkIG9jZWFub2dyYXBoZXIgU3RldmUgWmlzc291IGhhcyBzd29ybiB2ZW5nZWFuY2UgdXBvbiB0aGUgcmFyZSBzaGFyayB0aGF0IGRldm91cmVkIGEgbWVtYmVyIG9mIGhpcyBjcmV3LiBJbiBhZGRpdGlvbiB0byBoaXMgcmVndWxhciB0ZWFtLCBoZSBpcyBqb2luZWQgb24gaGlzIGJvYXQgYnkgTmVkLCBhIG1hbiB3aG8gYmVsaWV2ZXMgWmlzc291IHRvIGJlIGhpcyBmYXRoZXIsIGFuZCBKYW5lLCBhIGpvdXJuYWxpc3QgcHJlZ25hbnQgYnkgYSBtYXJyaWVkIG1hbi4gVGhleSB0cmF2ZWwgdGhlIHNlYSwgYWxsIHRvbyBvZnRlbiBydW5uaW5nIGludG8gcGlyYXRlcyBhbmQsIHBlcmhhcHMgbW9yZSB0cmF1bWF0aWNhbGx5LCB2YXJpb3VzIGZpZ3VyZXMgZnJvbSBaaXNzb3UncyBwYXN0LCBpbmNsdWRpbmcgaGlzIGVzdHJhbmdlZCB3aWZlLCBFbGVhbm9yLiIsInBvcHVsYXJpdHkiOjE4LjgxNCwicG9zdGVyX3BhdGgiOiIvcVpvRkxOQkM3OGp6Ym9XZURINkhhMHFhdkYyLmpwZyIsInByb2R1Y3Rpb25fY29tcGFuaWVzIjpbeyJpZCI6MjM0NDksImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkFtZXJpY2FuIEVtcGlyaWNhbCBQaWN0dXJlcyIsIm9yaWdpbl9jb3VudHJ5IjoiVVMifSx7ImlkIjo5MTk1LCJsb2dvX3BhdGgiOiIvb3U1QlVidHVscjZ0SXQ2OTlxNnhKaUVRVFI5LnBuZyIsIm5hbWUiOiJUb3VjaHN0b25lIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjI1OCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiU2NvdHQgUnVkaW4gUHJvZHVjdGlvbnMiLCJvcmlnaW5fY291bnRyeSI6IlVTIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IlVTIiwibmFtZSI6IlVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSJ9XSwicmVsZWFzZV9kYXRlIjoiMjAwNC0xMi0xMCIsInJldmVudWUiOjM0ODA4NDAzLCJydW50aW1lIjoxMTksInNwb2tlbl9sYW5ndWFnZXMiOlt7ImVuZ2xpc2hfbmFtZSI6IkVuZ2xpc2giLCJpc29fNjM5XzEiOiJlbiIsIm5hbWUiOiJFbmdsaXNoIn0seyJlbmdsaXNoX25hbWUiOiJJY2VsYW5kaWMiLCJpc29fNjM5XzEiOiJpcyIsIm5hbWUiOiLDjXNsZW5za2EifSx7ImVuZ2xpc2hfbmFtZSI6IlBvcnR1Z3Vlc2UiLCJpc29fNjM5XzEiOiJwdCIsIm5hbWUiOiJQb3J0dWd1w6pzIn0seyJlbmdsaXNoX25hbWUiOiJGcmVuY2giLCJpc29fNjM5XzEiOiJmciIsIm5hbWUiOiJGcmFuw6dhaXMifSx7ImVuZ2xpc2hfbmFtZSI6IlRhZ2Fsb2ciLCJpc29fNjM5XzEiOiJ0bCIsIm5hbWUiOiIifSx7ImVuZ2xpc2hfbmFtZSI6Ikdlcm1hbiIsImlzb182MzlfMSI6ImRlIiwibmFtZSI6IkRldXRzY2gifSx7ImVuZ2xpc2hfbmFtZSI6Ikl0YWxpYW4iLCJpc29fNjM5XzEiOiJpdCIsIm5hbWUiOiJJdGFsaWFubyJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiVGhlIGRlZXBlciB5b3UgZ28sIHRoZSB3ZWlyZGVyIGxpZmUgZ2V0cy4iLCJ0aXRsZSI6IlRoZSBMaWZlIEFxdWF0aWMgd2l0aCBTdGV2ZSBaaXNzb3UiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6Ny4xMjIsInZvdGVfY291bnQiOjI1MDJ9
+  recorded_at: Fri, 12 May 2023 21:54:26 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/421?api_key=27497a269af52c0049ba8bfe885390eb
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 0c3d82219b13a685c0bf3533df9acb52
+      X-Memc-Age:
+      - '624'
+      X-Memc-Expires:
+      - '25811'
+      Date:
+      - Fri, 12 May 2023 21:54:26 GMT
+      Cache-Control:
+      - public, max-age=27298
+      Etag:
+      - W/"2fd05a33fb41b16457541bbcc0e55b4e"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 acb55e8d2b8ad7df45561a8bccaaa688.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P3
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - wDY4dsXxM2UIHAwLdonoXtwF3RFtN1n3gX4MF2mD4YFLT1qAmteL9A==
+      Age:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvN3RXa3RuTFE4MUc4cEhVa2h1VGViY1RrY0IzLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MDAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6MTIsIm5hbWUiOiJBZHZlbnR1cmUifSx7ImlkIjozNSwibmFtZSI6IkNvbWVkeSJ9LHsiaWQiOjE4LCJuYW1lIjoiRHJhbWEifV0sImhvbWVwYWdlIjoiIiwiaWQiOjQyMSwiaW1kYl9pZCI6InR0MDM2MjI3MCIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IlRoZSBMaWZlIEFxdWF0aWMgd2l0aCBTdGV2ZSBaaXNzb3UiLCJvdmVydmlldyI6IlJlbm93bmVkIG9jZWFub2dyYXBoZXIgU3RldmUgWmlzc291IGhhcyBzd29ybiB2ZW5nZWFuY2UgdXBvbiB0aGUgcmFyZSBzaGFyayB0aGF0IGRldm91cmVkIGEgbWVtYmVyIG9mIGhpcyBjcmV3LiBJbiBhZGRpdGlvbiB0byBoaXMgcmVndWxhciB0ZWFtLCBoZSBpcyBqb2luZWQgb24gaGlzIGJvYXQgYnkgTmVkLCBhIG1hbiB3aG8gYmVsaWV2ZXMgWmlzc291IHRvIGJlIGhpcyBmYXRoZXIsIGFuZCBKYW5lLCBhIGpvdXJuYWxpc3QgcHJlZ25hbnQgYnkgYSBtYXJyaWVkIG1hbi4gVGhleSB0cmF2ZWwgdGhlIHNlYSwgYWxsIHRvbyBvZnRlbiBydW5uaW5nIGludG8gcGlyYXRlcyBhbmQsIHBlcmhhcHMgbW9yZSB0cmF1bWF0aWNhbGx5LCB2YXJpb3VzIGZpZ3VyZXMgZnJvbSBaaXNzb3UncyBwYXN0LCBpbmNsdWRpbmcgaGlzIGVzdHJhbmdlZCB3aWZlLCBFbGVhbm9yLiIsInBvcHVsYXJpdHkiOjE4LjgxNCwicG9zdGVyX3BhdGgiOiIvcVpvRkxOQkM3OGp6Ym9XZURINkhhMHFhdkYyLmpwZyIsInByb2R1Y3Rpb25fY29tcGFuaWVzIjpbeyJpZCI6MjM0NDksImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkFtZXJpY2FuIEVtcGlyaWNhbCBQaWN0dXJlcyIsIm9yaWdpbl9jb3VudHJ5IjoiVVMifSx7ImlkIjo5MTk1LCJsb2dvX3BhdGgiOiIvb3U1QlVidHVscjZ0SXQ2OTlxNnhKaUVRVFI5LnBuZyIsIm5hbWUiOiJUb3VjaHN0b25lIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjI1OCwibG9nb19wYXRoIjpudWxsLCJuYW1lIjoiU2NvdHQgUnVkaW4gUHJvZHVjdGlvbnMiLCJvcmlnaW5fY291bnRyeSI6IlVTIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IlVTIiwibmFtZSI6IlVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSJ9XSwicmVsZWFzZV9kYXRlIjoiMjAwNC0xMi0xMCIsInJldmVudWUiOjM0ODA4NDAzLCJydW50aW1lIjoxMTksInNwb2tlbl9sYW5ndWFnZXMiOlt7ImVuZ2xpc2hfbmFtZSI6IkVuZ2xpc2giLCJpc29fNjM5XzEiOiJlbiIsIm5hbWUiOiJFbmdsaXNoIn0seyJlbmdsaXNoX25hbWUiOiJJY2VsYW5kaWMiLCJpc29fNjM5XzEiOiJpcyIsIm5hbWUiOiLDjXNsZW5za2EifSx7ImVuZ2xpc2hfbmFtZSI6IlBvcnR1Z3Vlc2UiLCJpc29fNjM5XzEiOiJwdCIsIm5hbWUiOiJQb3J0dWd1w6pzIn0seyJlbmdsaXNoX25hbWUiOiJGcmVuY2giLCJpc29fNjM5XzEiOiJmciIsIm5hbWUiOiJGcmFuw6dhaXMifSx7ImVuZ2xpc2hfbmFtZSI6IlRhZ2Fsb2ciLCJpc29fNjM5XzEiOiJ0bCIsIm5hbWUiOiIifSx7ImVuZ2xpc2hfbmFtZSI6Ikdlcm1hbiIsImlzb182MzlfMSI6ImRlIiwibmFtZSI6IkRldXRzY2gifSx7ImVuZ2xpc2hfbmFtZSI6Ikl0YWxpYW4iLCJpc29fNjM5XzEiOiJpdCIsIm5hbWUiOiJJdGFsaWFubyJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiVGhlIGRlZXBlciB5b3UgZ28sIHRoZSB3ZWlyZGVyIGxpZmUgZ2V0cy4iLCJ0aXRsZSI6IlRoZSBMaWZlIEFxdWF0aWMgd2l0aCBTdGV2ZSBaaXNzb3UiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6Ny4xMjIsInZvdGVfY291bnQiOjI1MDJ9
+  recorded_at: Fri, 12 May 2023 21:54:26 GMT
+recorded_with: VCR 6.1.0

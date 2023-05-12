@@ -11,4 +11,13 @@ RSpec.describe User, type: :model do
     it { should have_many :party_users }
     it { should have_many(:parties).through(:party_users) }
   end
+
+  describe 'instance methods' do
+    describe '#name_and_email' do
+      it 'returns a string with the user name and email' do
+        user = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu')
+        expect(user.name_and_email).to eq('Billy Bob Thornton (billybob@turing.edu)')
+      end
+    end
+  end
 end

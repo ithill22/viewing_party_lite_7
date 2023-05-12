@@ -1,1 +1,22 @@
 <h3><%= @user.name %>'s Dashboard</h3>
+<br>
+<%= button_to "Discover Movies", user_discover_index_path(@user), method: :get %>
+<h4>Viewing Parties</h4>
+<ul id='viewing-party-list'>
+<% @parties.each do |party| %>
+  <li id="party-<%=party.id%>">
+    <%= image_tag "https://image.tmdb.org/t/p/w500/#{party.movie.image}" %>
+    <p><b><%= party.movie.title %></b></p>
+    <p><%= party.date %></p>
+    <p><%= party.start_time %></p>
+    <% if party.host_id == @user.id %>
+      <p>Hosting</p>
+    <% else %>
+      <p>Invited</p>
+    <% end %>
+  </li>
+<% end %>
+</ul>
+    
+
+  
