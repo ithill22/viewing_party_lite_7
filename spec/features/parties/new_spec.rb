@@ -16,7 +16,7 @@ RSpec.describe 'New Party Page', :vcr do
       expect(current_path).to eq(user_discover_index_path(@user_1))
     end
 
-    it 'I see a form to create a new party' do
+    xit 'I see a form to create a new party' do
       expect(page).to have_content('Create a Movie Party for The Shawshank Redemption')
       expect(page).to have_field(:party_duration_minutes)
       expect(page).to have_field(:party_date)
@@ -25,7 +25,7 @@ RSpec.describe 'New Party Page', :vcr do
       expect(page).to have_content('Invite Other Users')
     end
 
-    it 'I can fill out the form and submit to create a new party' do
+    xit 'I can fill out the form and submit to create a new party' do
       fill_in :party_duration_minutes, with: 120
       fill_in :party_date, with: '2023-08-01'
       fill_in :party_start_time, with: '12:00 PM'

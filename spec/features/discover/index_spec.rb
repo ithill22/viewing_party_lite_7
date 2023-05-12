@@ -10,7 +10,7 @@ RSpec.describe 'users discover index', :vcr do
     it 'creates a button to the Discover Top Rated Movies' do
       visit "/users/#{user_1.id}/discover"
 
-      click_button("Discover Top Rated Movies")
+      click_button("Find Top Rated Movies")
 
       expect(current_path).to eq("/users/#{user_1.id}/movies")
     end
@@ -19,7 +19,7 @@ RSpec.describe 'users discover index', :vcr do
       visit "/users/#{user_1.id}/discover"
 
       fill_in(:query, with: "god")
-      click_button("Search Movie")
+      click_button("Find Movies")
 
       expect(current_path).to eq("/users/#{user_1.id}/movies")
     end

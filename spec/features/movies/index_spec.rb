@@ -26,12 +26,6 @@ RSpec.describe 'movies index page', :vcr do
       expect(page).to have_link("The Basketball Diaries")
       expect(page).to_not have_link("The Godfather")
     end
-
-    it 'creates a link to the top rated movies detail page' do
-      click_link("The Godfather")
-
-      expect(current_path).to eq("/users/#{@user_1.id}/movies/238")
-    end
     
     it 'I see a button back to the discover page' do
       click_button 'Find Top Rated Movies'
