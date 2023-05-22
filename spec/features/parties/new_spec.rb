@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'New Party Page', :vcr do
   before :each do
-    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu')
-    @user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu')
-    @user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu')
-    @user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu')
+    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu', password: 'test_password', password_confirmation: 'test_password')
+    @user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu', password: 'test_password', password_confirmation: 'test_password')
+    @user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu', password: 'test_password', password_confirmation: 'test_password')
+    @user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu', password: 'test_password', password_confirmation: 'test_password')
     @movie = MovieFacade.new.movie_details(278)
     visit new_user_movie_party_path(@user_1, @movie.id)
   end

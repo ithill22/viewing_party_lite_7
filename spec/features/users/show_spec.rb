@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'User Dashboard Page', :vcr do
   before :each do
-    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu')
-    @user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu')
-    @user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu')
-    @user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu')
+    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu', password: 'test_password', password_confirmation: 'test_password')
+    @user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu', password: 'test_password', password_confirmation: 'test_password')
+    @user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu', password: 'test_password', password_confirmation: 'test_password')
+    @user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu', password: 'test_password', password_confirmation: 'test_password')
 
     @party_1 = Party.create!(duration_minutes: 120, start_time: '01:00:00', date: '2023-08-01', host_id: @user_1.id, movie_id: 550)
     @party_2 = Party.create!(duration_minutes: 200, start_time: '02:30:00', date: '2025-10-25', host_id: @user_1.id, movie_id: 378)
@@ -56,6 +56,7 @@ RSpec.describe 'User Dashboard Page', :vcr do
       end
 
       within "#party-#{@party_3.id}" do
+        # save_and_open_page
         expect(page).to have_content("Invited")
         expect(page).to_not have_content("Hosting")
       end
