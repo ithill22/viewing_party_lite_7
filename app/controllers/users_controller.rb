@@ -14,6 +14,7 @@ class UsersController < ApplicationController
       flash[:alert] = "Passwords do not match!"
       render :new
     elsif @user.save
+      session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.name}!"
       redirect_to dashboard_path(@user)
     else
@@ -41,6 +42,10 @@ class UsersController < ApplicationController
       flash[:alert] = "Invalid Credentials"
       render login_form
     end
+  end
+
+  def logout_user
+    redirect_to root_path
   end
 
   private

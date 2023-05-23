@@ -72,7 +72,7 @@ RSpec.describe 'landing page index' do
     
     expect(page).to have_button("Login")
 
-    click_button "Login"
+    click_button "Log In"
 
     expect(current_path).to eq(login_path)
   end

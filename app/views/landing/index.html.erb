@@ -9,4 +9,8 @@
 </div>
 <% end %>
 <%= button_to "New User", "/register", method: :get %>
-<%= button_to "Login", login_path, method: :get %>
+<% if logged_in? %>
+  <%= button_to "Log Out", logout_path, method: :delete %>
+  <% else %>
+  <%= button_to "Log In", login_path, method: :get %>
+<% end %>
