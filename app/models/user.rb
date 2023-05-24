@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  # def name_and_email_
+  # def name_and_email
   #   "#{name} (#{email})"
   # end
 end
