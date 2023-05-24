@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     # require 'pry'; binding.pry
     if @user.password != @user.password_confirmation
       flash[:alert] = "Passwords do not match!"
-      render :new
+      render :new 
     elsif @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.name}!"

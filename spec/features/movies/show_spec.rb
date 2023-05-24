@@ -2,12 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'Movies Show Page', :vcr do
   before :each do
-    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu')
-    visit user_movie_path(@user_1, 278)
+    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu', password: "test", password_confirmation: "test")
   end
 
   describe 'movies show page' do
     it 'I see the movie title, vote average, runtime, and genre(s)' do
+      visit user_movie_path(@user_1, 278)
+
       expect(page).to have_content('The Shawshank Redemption')
       expect(page).to have_content('Vote: 8.7')
       expect(page).to have_content('Runtime: 142 minutes')
@@ -16,15 +17,57 @@ RSpec.describe 'Movies Show Page', :vcr do
     end
 
     it 'I see a button to Create Viewing Party' do
+      visit login_path
+
+      fill_in :email, with: @user_1.email
+      fill_in :password, with: @user_1.password
+
+      click_on "Log In"
+
+      visit user_movie_path(@user_1, 278)
+
       expect(page).to have_button("Create Viewing Party for The Shawshank Redemption")
       click_button 'Create Viewing Party for The Shawshank Redemption'
       expect(current_path).to eq(new_user_movie_party_path(@user_1, 278))
     end
 
     it 'I see a button back to the discover page' do
+      visit login_path
+
+      fill_in :email, with: @user_1.email
+      fill_in :password, with: @user_1.password
+
+      click_on "Log In"
+
+      visit user_movie_path(@user_1, 278)
+
       expect(page).to have_button('Discover Page')
       click_button 'Discover Page'
       expect(current_path).to eq(user_discover_index_path(@user_1))
+    end
+  end
+
+  describe "As a visitor", :vcr do
+    it 'I cannot go to the page to create a new viewing party without logging in first' do
+      visit user_movie_path(@user_1, 278)
+      
+      click_button "Create Viewing Party for The Shawshank Redemption"
+
+      expect(current_path).to eq(user_movie_path(@user_1, 278))
+      expect(page).to have_content("Must be logged in to create a viewing party")
+
+      visit login_path
+
+      fill_in :email, with: @user_1.email
+      fill_in :password, with: @user_1.password
+
+      click_on "Log In"
+
+      visit user_movie_path(@user_1, 278)
+
+      click_button "Create Viewing Party for The Shawshank Redemption"
+
+      expect(current_path).to eq(new_user_movie_party_path(@user_1, 278))
     end
   end
 end
