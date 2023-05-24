@@ -23,6 +23,7 @@ RSpec.describe 'User Dashboard Page', :vcr do
     @party_user_9 = PartyUser.create!(user_id: @user_2.id, party_id: @party_3.id, host_id: @user_2.id)
     @party_user_10 = PartyUser.create!(user_id: @user_3.id, party_id: @party_3.id, host_id: @user_2.id)
 
+    login_user(@user_1.email, @user_1.password)
     visit dashboard_path(@user_1)
   end
 

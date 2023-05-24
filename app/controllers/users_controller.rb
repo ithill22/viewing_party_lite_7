@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:show]
+
   def show
     @user = User.find(params[:user_id])
     @parties = @user.parties
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
       flash.now[:alert] = "Passwords do not match."
       render :new
     elsif @user.save
+      session[:user_id] = @user.id
       redirect_to dashboard_path(@user), notice: "Welcome to Viewing Party!"
     else
       flash.now[:alert] = @user.errors.full_messages.join(", ")
@@ -35,10 +38,22 @@ class UsersController < ApplicationController
       render :login_form
     end
   end
+
+  def logout
+    session[:user_id] = nil
+    redirect_to root_path, notice: "You have been logged out."
+  end
   
 
   private
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def require_login
+    unless current_user
+      flash[:alert] = "You must be logged in to access this page."
+      redirect_to root_path
+    end
   end
 end

@@ -75,3 +75,10 @@ VCR.configure do |config|
   # config.filter_sensitive_data('<MOVIE_API_KEY>') { ENV["MOVIE_API_KEY"] }
   config.configure_rspec_metadata!
 end
+
+def login_user(email, password)
+  visit login_path
+  fill_in :email, with: email
+  fill_in :password, with: password
+  click_button 'Log In'
+end

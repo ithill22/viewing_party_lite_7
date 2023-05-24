@@ -7,13 +7,17 @@ class PartiesController < ApplicationController
   end
 
   def create
-    @party = Party.new(party_params)
-    # require 'pry'; binding.pry
-    if @party.save
-      create_party_users(params[:users], party.id, params[:user_id])
-      redirect_to dashboard_path(params[:user_id]), notice: "Party successfully created!"
+    if current_user
+      @party = Party.new(party_params)
+
+      if @party.save
+        create_party_users(params[:users], @party.id, params[:user_id])
+        redirect_to dashboard_path(params[:user_id]), notice: "Party successfully created!"
+      else
+        redirect_to new_user_movie_party_path(params[:user_id], params[:movie_id]), notice: "Please fill in all fields"
+      end
     else
-      redirect_to new_user_movie_party_path(params[:user_id], params[:movie_id]), notice: "Please fill in all fields"
+      redirect_to movie_path(params[:movie_id]), notice: "You must be logged in or registered to create a viewing party."
     end
   end
 
