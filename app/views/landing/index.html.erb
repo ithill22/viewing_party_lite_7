@@ -4,7 +4,7 @@
   <h3>Existing Users</h3>
   <ul>
   <% @users.each do |user| %>
-    <b><li><%= link_to "#{user.name}", "/dashboard/#{user.id}" %></li></b>
+    <b><li><%= "#{user.email}" %></li></b>
   <% end %>
   </ul>
 <% end %>

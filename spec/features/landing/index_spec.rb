@@ -31,10 +31,7 @@ RSpec.describe 'landing page index' do
 
       visit root_path
 
-      expect(page).to have_content(user_1.name)
-      click_link("#{user_1.name}")
-
-      expect(current_path).to eq("/dashboard/#{user_1.id}")
+      expect(page).to have_content(user_1.email)
 
       visit login_path
 
@@ -45,10 +42,7 @@ RSpec.describe 'landing page index' do
 
       visit root_path
 
-      expect(page).to have_content(user_2.name)
-      click_link("#{user_2.name}")
-      
-      expect(current_path).to eq("/dashboard/#{user_2.id}")
+      expect(page).to have_content(user_2.email)
 
       visit login_path
 
@@ -59,10 +53,7 @@ RSpec.describe 'landing page index' do
 
       visit root_path
 
-      expect(page).to have_content(user_3.name)
-      click_link("#{user_3.name}")
-  
-      expect(current_path).to eq("/dashboard/#{user_3.id}")
+      expect(page).to have_content(user_3.email)
 
       visit login_path
 
@@ -73,10 +64,7 @@ RSpec.describe 'landing page index' do
 
       visit root_path
       
-      expect(page).to have_content(user_4.name)
-      click_link("#{user_4.name}")
-
-      expect(current_path).to eq("/dashboard/#{user_4.id}")
+      expect(page).to have_content(user_4.email)
     end
 
     it 'creates a link to go back to the landing page' do
@@ -107,8 +95,8 @@ RSpec.describe 'landing page index' do
     visit root_path
 
     expect(page).to_not have_content("Existing Users")
-    expect(page).to_not have_content(user_2.name)
-    expect(page).to_not have_content(user_3.name)
+    expect(page).to_not have_content(user_2.email)
+    expect(page).to_not have_content(user_3.email)
   end
 
   it "registered user can see existing users" do
@@ -126,7 +114,8 @@ RSpec.describe 'landing page index' do
     visit root_path
     
     expect(page).to have_content("Existing Users")
-    expect(page).to have_content(user_2.name)
-    expect(page).to have_content(user_3.name)
+    expect(page).to have_content(user.email)
+    expect(page).to have_content(user_2.email)
+    expect(page).to have_content(user_3.email)
   end
 end
