@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 User.destroy_all
 
-@user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu')
-@user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu')
-@user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu')
-@user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu')
+@user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu', password: 'password123')
+@user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu', password: 'password123')
+@user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu', password: 'password123')
+@user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu', password: 'password123')
