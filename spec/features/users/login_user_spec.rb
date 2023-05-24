@@ -18,5 +18,23 @@ RSpec.describe "Login Page" do
       expect(page).to have_content("Invalid Credentials")
       expect(current_path).to eq(login_path)
     end
+
+    it "creates a log out button on the landing page once a user is logged on successfully" do
+      expect(current_path).to eq(login_path)
+
+      fill_in :email, with: @user.email
+      fill_in :password, with: @user.password
+
+      click_on "Log In"
+
+      expect(page).to have_content("Welcome back, #{@user.name}!")
+      expect(current_path).to eq(dashboard_path(@user))
+
+      visit root_path
+
+      click_button "Log Out"
+
+      expect(current_path).to eq(root_path)
+    end
   end
 end

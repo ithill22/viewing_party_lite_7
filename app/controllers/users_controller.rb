@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_user, only: :show
   def show
     @user = User.find(params[:user_id])
     @parties = @user.parties
@@ -12,8 +13,9 @@ class UsersController < ApplicationController
     # require 'pry'; binding.pry
     if @user.password != @user.password_confirmation
       flash[:alert] = "Passwords do not match!"
-      render :new
+      render :new 
     elsif @user.save
+      session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.name}!"
       redirect_to dashboard_path(@user)
     else
@@ -43,8 +45,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def logout_user
+    redirect_to root_path
+  end
+
   private
   def user_params
     params.permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def require_user
+    if !session[:user_id]
+      flash[:alert] = "Must be logged in to access this dashboard"
+      redirect_to root_path
+    end
   end
 end

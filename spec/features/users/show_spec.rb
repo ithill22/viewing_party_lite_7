@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'User Dashboard Page', :vcr do
   before :each do
-    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu')
-    @user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu')
-    @user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu')
-    @user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu')
+    @user_1 = User.create!(name: 'Billy Bob Thornton', email: 'billybob@turing.edu', password: "test")
+    @user_2 = User.create!(name: 'Sandra Bullock', email: 'sandy@turing.edu', password: "test")
+    @user_3 = User.create!(name: 'Tom Hanks', email: 'tom@turing.edu', password: "test")
+    @user_4 = User.create!(name: 'Will Smith', email: 'will@turing.edu', password: "test")
 
     @party_1 = Party.create!(duration_minutes: 120, start_time: '01:00:00', date: '2023-08-01', host_id: @user_1.id, movie_id: 550)
     @party_2 = Party.create!(duration_minutes: 200, start_time: '02:30:00', date: '2025-10-25', host_id: @user_1.id, movie_id: 378)
@@ -22,24 +22,50 @@ RSpec.describe 'User Dashboard Page', :vcr do
     @party_user_8 = PartyUser.create!(user_id: @user_1.id, party_id: @party_3.id, host_id: @user_2.id)
     @party_user_9 = PartyUser.create!(user_id: @user_2.id, party_id: @party_3.id, host_id: @user_2.id)
     @party_user_10 = PartyUser.create!(user_id: @user_3.id, party_id: @party_3.id, host_id: @user_2.id)
-
-    visit dashboard_path(@user_1)
   end
 
   describe 'as a registered user, when I visit my dashboard' do
     it 'I see users name dashboard' do
+      visit login_path
+
+      fill_in :email, with: @user_1.email
+      fill_in :password, with: @user_1.password
+
+      click_on "Log In"
+
+      visit dashboard_path(@user_1)
+
       expect(page).to have_content("Billy Bob Thornton's Dashboard")
       expect(page).to_not have_content("Sandra Bullock's Dashboard")
     end
 
     it 'I see a button to discover movies' do
+      visit login_path
+
+      fill_in :email, with: @user_1.email
+      fill_in :password, with: @user_1.password
+
+      click_on "Log In"
+
+      visit dashboard_path(@user_1)
+
       expect(page).to have_button('Discover Movies')
       click_button 'Discover Movies'
       expect(current_path).to eq(user_discover_index_path(@user_1))
     end
 
     it 'I see a list of parties I am hosting or invited to' do
+      visit login_path
+
+      fill_in :email, with: @user_1.email
+      fill_in :password, with: @user_1.password
+
+      click_on "Log In"
+
+      visit dashboard_path(@user_1)
+
       expect(page).to have_content('Viewing Parties')
+      
       within '#viewing-party-list' do
         expect(page).to have_content(@party_1.movie.title)
         expect(page).to have_content(@party_2.movie.title)
@@ -60,5 +86,12 @@ RSpec.describe 'User Dashboard Page', :vcr do
         expect(page).to_not have_content("Hosting")
       end
     end
+  end
+
+  it 'visitor gets redirected if they try to visit the dashboard path without logging in first' do
+    visit dashboard_path(@user_1)
+
+    expect(current_path).to eq(root_path)
+    expect(page).to have_content("Must be logged in to access this dashboard")
   end
 end

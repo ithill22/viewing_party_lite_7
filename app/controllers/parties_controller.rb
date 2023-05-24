@@ -1,4 +1,5 @@
 class PartiesController < ApplicationController
+  before_action :require_user, only: :new
   def new
     @user = User.find(params[:user_id])
     @users = User.all
@@ -28,4 +29,11 @@ class PartiesController < ApplicationController
       PartyUser.create!(user_id: user[0].to_i, party_id: party_id)
     end
   end
+
+  def require_user
+    if !session[:user_id]
+      flash[:alert] = "Must be logged in to create a viewing party"
+      redirect_to user_movie_path(params[:user_id], params[:movie_id])
+    end
+  end 
 end

@@ -22,38 +22,49 @@ RSpec.describe 'landing page index' do
     end
 
     it 'displays a list of existing users which links to users dashboard' do
+      visit login_path
+
+      fill_in :email, with: user_1.email
+      fill_in :password, with: user_1.password
+
+      click_on "Log In"
+
       visit root_path
 
-      within "#user-#{user_1.id}" do
-        expect(page).to have_content(user_1.name)
-        click_link("#{user_1.name}")
-      end
+      expect(page).to have_content(user_1.email)
 
-      expect(current_path).to eq("/dashboard/#{user_1.id}")
+      visit login_path
+
+      fill_in :email, with: user_2.email
+      fill_in :password, with: user_2.password
+
+      click_on "Log In"
+
       visit root_path
 
-      within "#user-#{user_2.id}" do
-        expect(page).to have_content(user_2.name)
-        click_link("#{user_2.name}")
-      end
+      expect(page).to have_content(user_2.email)
+
+      visit login_path
+
+      fill_in :email, with: user_3.email
+      fill_in :password, with: user_3.password
+
+      click_on "Log In"
+
+      visit root_path
+
+      expect(page).to have_content(user_3.email)
+
+      visit login_path
+
+      fill_in :email, with: user_4.email
+      fill_in :password, with: user_4.password
+
+      click_on "Log In"
+
+      visit root_path
       
-      expect(current_path).to eq("/dashboard/#{user_2.id}")
-      visit root_path
-
-      within "#user-#{user_3.id}" do
-        expect(page).to have_content(user_3.name)
-        click_link("#{user_3.name}")
-      end
-
-      expect(current_path).to eq("/dashboard/#{user_3.id}")
-      visit root_path
-      
-      within "#user-#{user_4.id}" do
-        expect(page).to have_content(user_4.name)
-        click_link("#{user_4.name}")
-      end
-
-      expect(current_path).to eq("/dashboard/#{user_4.id}")
+      expect(page).to have_content(user_4.email)
     end
 
     it 'creates a link to go back to the landing page' do
@@ -70,10 +81,41 @@ RSpec.describe 'landing page index' do
   it "has a login button" do
     visit root_path
     
-    expect(page).to have_button("Login")
+    expect(page).to have_button("Log In")
 
-    click_button "Login"
+    click_button "Log In"
 
     expect(current_path).to eq(login_path)
+  end
+
+  it 'visitor does not see existing users' do
+    user_2 = User.create!(name: "Christopher Byun", email: "chrisb@yahoo.com", password: "test", password_confirmation: "test")
+    user_3 = User.create!(name: "Scott Le", email: "scottle123@gmail.com", password: "test", password_confirmation: "test")
+    
+    visit root_path
+
+    expect(page).to_not have_content("Existing Users")
+    expect(page).to_not have_content(user_2.email)
+    expect(page).to_not have_content(user_3.email)
+  end
+
+  it "registered user can see existing users" do
+    user = User.create!(name: "Angel Byun", email: "angelbyun@turing.edu", password: "test", password_confirmation: "test")
+    user_2 = User.create!(name: "Christopher Byun", email: "chrisb@yahoo.com", password: "test", password_confirmation: "test")
+    user_3 = User.create!(name: "Scott Le", email: "scottle123@gmail.com", password: "test", password_confirmation: "test")
+
+    visit login_path
+
+    fill_in :email, with: user.email
+    fill_in :password, with: user.password
+
+    click_on "Log In"
+
+    visit root_path
+    
+    expect(page).to have_content("Existing Users")
+    expect(page).to have_content(user.email)
+    expect(page).to have_content(user_2.email)
+    expect(page).to have_content(user_3.email)
   end
 end
